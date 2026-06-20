@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,36 +47,40 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="portfolio.html">Abdullah Portfolio</a>
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Abdullah Shopping</a>
 
-      <div class="ms-auto d-flex flex-wrap gap-2">
-        <a 
-          class="btn btn-outline-light fw-semibold" 
-          href="https://gmac1231.github.io/Abdullah-Portfolio/" 
-          target="_blank"
-        >
-          My Portfolio
-        </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <a 
-          class="btn btn-outline-light fw-semibold" 
-          href="https://github.com/GMAC1231" 
-          target="_blank"
-        >
-          GitHub
-        </a>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
 
-        <a 
-          class="btn btn-warning fw-semibold" 
-          href="https://gmac1231.github.io/Capstone-Complete-E-Commerce-Website/index.html" 
-          target="_blank"
-        >
-          Open Capstone Site
-        </a>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">
+            Cart <span class="badge text-bg-warning cart-count">0</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-warning fw-semibold ms-lg-2" href="checkout.html">Checkout</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-outline-light fw-semibold ms-lg-2 active" href="portfolio.html">Portfolio</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <header class="hero">
     <div class="container">
@@ -286,6 +289,7 @@
     </div>
   </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-```
