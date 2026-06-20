@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdullah Shopping | Checkout</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Abdullah Shopping</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">
+            Cart <span class="badge text-bg-warning cart-count">0</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-warning fw-semibold ms-lg-2 active" href="checkout.html">Checkout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+
+  <h1 class="fw-bold mb-4">Checkout</h1>
+
+  <div class="row g-4">
+
+    <div class="col-lg-7">
+      <form id="checkoutForm" class="checkout-card rounded-4 shadow-sm p-4" novalidate>
+
+        <h2 class="h4 fw-bold mb-3">Customer Details</h2>
+
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <label class="form-label">Full Name</label>
+            <input 
+              type="text" 
+              id="fullName" 
+              class="form-control" 
+              placeholder="Abdullah Muhammad" 
+              required 
+              minlength="3"
+            >
+            <div class="invalid-feedback">
+              Please enter your full name.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              class="form-control" 
+              placeholder="name@example.com" 
+              required
+            >
+            <div class="invalid-feedback">
+              Please enter a valid email address.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Phone</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              class="form-control" 
+              placeholder="+968 9000 0000" 
+              required 
+              pattern="^[+0-9\s-]{8,}$"
+            >
+            <div class="invalid-feedback">
+              Please enter a valid phone number.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">City</label>
+            <input 
+              type="text" 
+              id="city" 
+              class="form-control" 
+              placeholder="Muscat" 
+              required
+            >
+            <div class="invalid-feedback">
+              Please enter your city.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Shipping Address</label>
+            <textarea 
+              id="address" 
+              class="form-control" 
+              rows="3" 
+              placeholder="House, street, area" 
+              required 
+              minlength="8"
+            ></textarea>
+            <div class="invalid-feedback">
+              Please enter a complete address.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Payment Method</label>
+            <select id="payment" class="form-select" required>
+              <option value="">Choose payment method</option>
+              <option>Cash on Delivery</option>
+              <option>Card Payment UI Only</option>
+            </select>
+
+            <div class="invalid-feedback">
+              Please select a payment method.
+            </div>
+          </div>
+
+        </div>
+
+        <button class="btn btn-warning fw-semibold w-100 mt-4" type="submit">
+          Place Order
+        </button>
+
+        <div id="checkoutMessage" class="alert alert-success mt-3 d-none"></div>
+
+      </form>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="checkout-card rounded-4 shadow-sm p-4">
+
+        <h2 class="h4 fw-bold mb-3">Your Order</h2>
+
+        <div id="checkoutItems"></div>
+
+        <hr>
+
+        <div class="d-flex justify-content-between">
+          <span>Subtotal</span>
+          <strong>$<span id="checkoutSubtotal">0.00</span></strong>
+        </div>
+
+        <div class="d-flex justify-content-between mt-2">
+          <span>Shipping</span>
+          <strong>$<span id="checkoutShipping">0.00</span></strong>
+        </div>
+
+        <div class="d-flex justify-content-between fs-5 mt-3">
+          <span>Total</span>
+          <strong>$<span id="checkoutTotal">0.00</span></strong>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="bg-dark text-white-50 py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <p class="mb-0">2026 Abdullah Shopping. Capstone Project.</p>
+    <p class="mb-0">Checkout form validation included.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

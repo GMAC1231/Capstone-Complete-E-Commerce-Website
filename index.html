@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini E-Commerce Website</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Abdullah Shopping</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">
+            Cart <span class="badge text-bg-warning cart-count">0</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-warning fw-semibold ms-lg-2" href="checkout.html">Checkout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-section">
+  <div class="container py-5">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="badge rounded-pill text-bg-warning mb-3">
+          Abdullah E-Commerce Website
+        </span>
+
+        <h1 class="display-4 fw-bold text-white">
+          Welcome to Abdullah Shopping
+        </h1>
+
+        <p class="lead text-white-50 mt-3">
+          A complete responsive e-commerce website with product search,
+          filtering, sorting, cart system, and checkout validation.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="shop.html" class="btn btn-warning btn-lg fw-semibold">
+            Start Shopping
+          </a>
+
+          <a href="cart.html" class="btn btn-outline-light btn-lg">
+            View Cart
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="hero-card p-4 rounded-4 shadow-lg">
+          <img 
+            src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?auto=format&fit=crop&w=1200&q=80"
+            alt="Online shopping"
+            class="img-fluid rounded-4"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container my-5">
+
+  <section class="text-center mb-5">
+    <h2 class="fw-bold">Why Abdullah Shopping?</h2>
+    <p class="text-muted">
+      This website demonstrates HTML, CSS, Bootstrap, JavaScript, localStorage,
+      form validation, and responsive UI design.
+    </p>
+  </section>
+
+  <section class="row g-4 text-center">
+    <div class="col-md-4">
+      <div class="feature-card h-100 p-4 rounded-4 shadow-sm">
+        <div class="feature-icon">🔍</div>
+        <h3 class="h5 mt-3">Search & Filter</h3>
+        <p class="text-muted">
+          Search products and filter them by category.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="feature-card h-100 p-4 rounded-4 shadow-sm">
+        <div class="feature-icon">🛒</div>
+        <h3 class="h5 mt-3">Cart Functionality</h3>
+        <p class="text-muted">
+          Add, remove, update quantity, and calculate total using localStorage.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="feature-card h-100 p-4 rounded-4 shadow-sm">
+        <div class="feature-icon">✅</div>
+        <h3 class="h5 mt-3">Checkout Validation</h3>
+        <p class="text-muted">
+          Checkout form with validation and order confirmation UI.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="fw-bold">Featured Products</h2>
+      <a href="shop.html" class="btn btn-outline-dark">View All Products</a>
+    </div>
+
+    <div class="row g-4" id="featuredProducts"></div>
+  </section>
+
+</main>
+
+<footer class="bg-dark text-white-50 py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+    <p class="mb-0">© 2026 ShopEase. Capstone Project.</p>
+    <p class="mb-0">Built with HTML, CSS, Bootstrap, and JavaScript.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
